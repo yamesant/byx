@@ -1,6 +1,4 @@
-﻿using Shouldly;
-
-namespace BYX.Core.Tests;
+﻿namespace BYX.Core.Tests;
 
 public sealed class AlphabetTests
 {
