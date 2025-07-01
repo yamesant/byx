@@ -9,6 +9,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.gitignore = .gitignore
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BYX.Core", "BYX.Core\BYX.Core.csproj", "{C02500B1-C9E1-4575-876A-E74C02F2C726}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BYX.Core.Tests", "BYX.Core.Tests\BYX.Core.Tests.csproj", "{AA1A7C6E-156B-4B8C-97D1-9AD916C61F08}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -16,5 +20,15 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C02500B1-C9E1-4575-876A-E74C02F2C726}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C02500B1-C9E1-4575-876A-E74C02F2C726}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C02500B1-C9E1-4575-876A-E74C02F2C726}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C02500B1-C9E1-4575-876A-E74C02F2C726}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA1A7C6E-156B-4B8C-97D1-9AD916C61F08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA1A7C6E-156B-4B8C-97D1-9AD916C61F08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA1A7C6E-156B-4B8C-97D1-9AD916C61F08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA1A7C6E-156B-4B8C-97D1-9AD916C61F08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
