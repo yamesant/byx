@@ -20,28 +20,55 @@ public sealed class SequenceTests
     public void SameSequencesEqual()
     {
         // Arrange
-        Sequence a = new("ABBA", new("ABC"));
-        Sequence b = new("ABBA", new("ABC"));
-        
-        // Act
-        bool result = a.Equals(b);
+        Sequence a = new("ABBA", new("ABC"), "454545", "Simple");
+        Sequence b = new("ABBA", new("ABC"), "454545", "Simple");
         
         // Assert
-        result.ShouldBe(true);
+        a.ShouldBe(b);
     }
-    
+
     [Fact]
-    public void SameCharacterDifferentAlphabetSequencesNotEqual()
+    public void DifferentCharactersNotEqual()
+    {
+        // Arrange
+        Sequence a = new("AA", new("ABC"));
+        Sequence b = new("ACC", new("ABC"));
+
+        // Assert
+        a.ShouldNotBe(b);
+    }
+
+    [Fact]
+    public void DifferentAlphabetsNotEqual()
     {
         // Arrange
         Sequence a = new("ABBA", new("ABC"));
         Sequence b = new("ABBA", new("AB"));
         
-        // Act
-        bool result = a.Equals(b);
+        // Assert
+        a.ShouldNotBe(b);
+    }
+    
+    [Fact]
+    public void DifferentNamesNotEqual()
+    {
+        // Arrange
+        Sequence a = new("ABBA", new("AB"), "seq_a");
+        Sequence b = new("ABBA", new("AB"), "seq_b");
         
         // Assert
-        result.ShouldBe(false);
+        a.ShouldNotBe(b);
+    }
+    
+    [Fact]
+    public void DifferentDescriptionsNotEqual()
+    {
+        // Arrange
+        Sequence a = new("ABBA", new("AB"), "seq", "1");
+        Sequence b = new("ABBA", new("AB"), "seq", "2");
+        
+        // Assert
+        a.ShouldNotBe(b);
     }
 
     [Fact]
@@ -62,5 +89,38 @@ public sealed class SequenceTests
         
         // Assert
         result.ShouldBe(expectedString);
+    }
+    
+    [Fact]
+    public void NullNameGivenDefaultName()
+    {
+        // Arrange
+        Sequence a = new("X", new("X"));
+        
+        // Assert
+        a.Name.ShouldBe(Sequence.DefaultName);
+    }
+    
+    [Fact]
+    public void EmptyNameGivenDefaultName()
+    {
+        // Arrange
+        Sequence a = new("X", new("X"), "");
+        
+        // Assert
+        a.Name.ShouldBe(Sequence.DefaultName);
+    }
+    
+    [Theory]
+    [InlineData(" name")]
+    [InlineData("name ")]
+    [InlineData("na me")]
+    public void SequenceNamesContainNoSpaces(string name)
+    {
+        // Act
+        Action action = () => _ = new Sequence("AABBAA", new("BA"), name);
+
+        // Assert
+        action.ShouldThrow<ArgumentException>();
     }
 }
