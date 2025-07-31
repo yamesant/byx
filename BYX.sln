@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BYX.Core", "BYX.Core\BYX.Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BYX.Core.Tests", "BYX.Core.Tests\BYX.Core.Tests.csproj", "{AA1A7C6E-156B-4B8C-97D1-9AD916C61F08}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BYX.Files", "BYX.Files\BYX.Files.csproj", "{B64C8A51-5A8E-47C8-89AE-B13836492202}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{AA1A7C6E-156B-4B8C-97D1-9AD916C61F08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA1A7C6E-156B-4B8C-97D1-9AD916C61F08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA1A7C6E-156B-4B8C-97D1-9AD916C61F08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B64C8A51-5A8E-47C8-89AE-B13836492202}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B64C8A51-5A8E-47C8-89AE-B13836492202}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B64C8A51-5A8E-47C8-89AE-B13836492202}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B64C8A51-5A8E-47C8-89AE-B13836492202}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
