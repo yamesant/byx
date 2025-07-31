@@ -17,6 +17,8 @@ public sealed class FastaWriter
     public void Write(Sequence sequence)
     {
         using StreamWriter writer = _fileSystem.File.CreateText(_path);
-        throw new NotImplementedException();
+        string header = ">" + sequence.Name + (sequence.Description is null ? "" : " " + sequence.Description);
+        writer.WriteLine(header);
+        writer.WriteLine(sequence.Characters);
     }
 }
